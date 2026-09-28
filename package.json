@@ -1,0 +1,12 @@
+{
+  "name": "tick-ninja",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern TikTok downloader web app with a Vercel-ready API proxy.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,56 +1,30 @@
-# TikView — Tik.ninja-style public TikTok viewer
+# Tick Ninja
 
-A small, production-oriented starter for a public TikTok viewer.
+A modern, responsive TikTok downloader interface with an Express local server and a Vercel serverless API.
 
-## What it does
+## Deploy to Vercel
 
-- Accepts a public TikTok URL.
-- Validates the hostname server-side.
-- Calls TikTok's public oEmbed endpoint from the backend.
-- Displays returned title, creator, thumbnail, and TikTok's supplied embed.
-- Responsive mobile UI.
-- Does not collect TikTok passwords or cookies.
+1. Upload this folder to GitHub.
+2. Import the repository into Vercel.
+3. Root Directory: `./`
+4. Build Command: **leave empty / do not override**
+5. Output Directory: **leave empty / do not override**
+6. Install Command: `npm install`
+7. Deploy.
+
+There is intentionally no `build` script. The previous Vercel error `Missing script: "build"` happens when Vercel is configured to run `npm run build` even though this app does not need a build step.
 
 ## Run locally
-
-Requirements: Node.js 18+.
 
 ```bash
 npm install
 npm start
 ```
 
-Open:
+Then open http://localhost:3000
 
-```text
-http://localhost:3000
-```
+## API provider
 
-Development:
+The backend uses TikWM as the processing provider. TikWM's public site documents TikTok link processing and download options. Provider availability, limits, and output quality can change, so this integration should be treated as an external dependency.
 
-```bash
-npm run dev
-```
-
-## API
-
-```text
-GET /api/health
-GET /api/oembed?url=<public TikTok URL>
-```
-
-## Important limitation
-
-This starter intentionally does not scrape private accounts or bypass TikTok access controls.
-A username-to-full-profile search requires an appropriate TikTok API/data-access arrangement.
-Do not add credential/session-cookie collection.
-
-## Production checklist
-
-- Put the app behind HTTPS.
-- Add rate limiting at your reverse proxy/API layer.
-- Add request logging without storing sensitive user data.
-- Add a clear privacy policy and terms.
-- Add abuse reporting/contact information.
-- Respect TikTok's current developer/platform terms and any applicable copyright/privacy rules.
-- Cache public oEmbed responses briefly to reduce repeated requests.
+Only use content you are permitted to download, and follow TikTok's terms and applicable copyright laws.
