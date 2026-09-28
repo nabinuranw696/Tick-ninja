@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A clean public TikTok URL viewer.">
+  <title>TikView — Public TikTok Viewer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/">TikView<span>.</span></a>
+    <span class="badge">PUBLIC VIEWER</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">FAST · SIMPLE · NO LOGIN</div>
+      <h1>View public TikTok content.</h1>
+      <p class="sub">
+        Paste a public TikTok video URL and preview its available public metadata and embed.
+      </p>
+
+      <form id="lookupForm" class="search">
+        <input
+          id="urlInput"
+          type="url"
+          autocomplete="off"
+          placeholder="https://www.tiktok.com/@user/video/..."
+          required
+        >
+        <button type="submit">View</button>
+      </form>
+
+      <div class="examples">
+        <button data-example="https://www.tiktok.com/">Example format</button>
+        <span>We only handle public TikTok URLs.</span>
+      </div>
+    </section>
+
+    <section id="status" class="status hidden"></section>
+
+    <section id="result" class="result hidden">
+      <div class="card">
+        <div class="thumb-wrap">
+          <img id="thumbnail" alt="TikTok thumbnail" class="thumbnail hidden">
+          <div id="thumbPlaceholder" class="thumb-placeholder">TikTok</div>
+        </div>
+
+        <div class="meta">
+          <div class="label">PUBLIC CONTENT</div>
+          <h2 id="title">—</h2>
+          <a id="author" href="#" target="_blank" rel="noopener noreferrer">—</a>
+          <p id="sourceUrl" class="source"></p>
+        </div>
+      </div>
+
+      <div class="embed-card">
+        <div class="embed-title">Embedded post</div>
+        <div id="embed"></div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article>
+        <h3>Public only</h3>
+        <p>No private-account access, login bypassing, or hidden content.</p>
+      </article>
+      <article>
+        <h3>No password collection</h3>
+        <p>This app never asks for a TikTok password or session cookie.</p>
+      </article>
+      <article>
+        <h3>Simple backend</h3>
+        <p>Express validates the URL and requests public oEmbed metadata.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 TikView</span>
+    <span>Not affiliated with TikTok.</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
