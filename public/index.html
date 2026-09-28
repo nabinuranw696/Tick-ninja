@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="description" content="Tick Ninja — fast, clean TikTok video downloader.">
+  <title>Tick Ninja — TikTok Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="bg-glow glow-a"></div>
+  <div class="bg-glow glow-b"></div>
+
+  <header class="nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">TN</span>
+      <span>Tick<span>Ninja</span></span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☀</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge"><span></span> Fast • Simple • Mobile friendly</div>
+      <h1>Download your TikTok<br><em>videos in seconds.</em></h1>
+      <p class="hero-copy">Paste a public TikTok link and get download options in a clean, distraction-free interface.</p>
+
+      <div class="search-card">
+        <form id="downloadForm">
+          <div class="input-wrap">
+            <span class="link-icon">↗</span>
+            <input id="urlInput" type="url" autocomplete="off" placeholder="Paste TikTok video link here…" aria-label="TikTok URL" required>
+            <button type="button" id="pasteBtn" class="paste-btn">Paste</button>
+          </div>
+          <button id="submitBtn" class="download-btn" type="submit">
+            <span>Get video</span><span class="arrow">→</span>
+          </button>
+        </form>
+        <div class="trust-row">
+          <span>✓ No registration</span>
+          <span>✓ Works on mobile</span>
+          <span>✓ Public links only</span>
+        </div>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="features" id="how">
+      <div class="section-heading">
+        <span class="eyebrow">WHY TICK NINJA</span>
+        <h2>Built for a smoother download flow.</h2>
+      </div>
+      <div class="feature-grid">
+        <article><div class="feature-icon">⚡</div><h3>Quick processing</h3><p>One link, one request, clear results. No complicated steps.</p></article>
+        <article><div class="feature-icon">◎</div><h3>Clean interface</h3><p>Responsive design that feels natural on phones, tablets and desktop.</p></article>
+        <article><div class="feature-icon">↘</div><h3>Multiple options</h3><p>Choose the available video, HD, watermark or audio option returned by the provider.</p></article>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="section-heading" id="faq">
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2>Three simple steps.</h2>
+      </div>
+      <div class="step-grid">
+        <div class="step"><b>01</b><h3>Copy</h3><p>Open a public TikTok video and copy its share link.</p></div>
+        <div class="step"><b>02</b><h3>Paste</h3><p>Paste the link into Tick Ninja and tap Get video.</p></div>
+        <div class="step"><b>03</b><h3>Save</h3><p>Choose an available format and save it to your device.</p></div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <div><strong>Use responsibly.</strong><p>Only download content you have permission to save and use. Respect creators and platform rules.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Tick Ninja</span>
+    <span>Made for a better web.</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
